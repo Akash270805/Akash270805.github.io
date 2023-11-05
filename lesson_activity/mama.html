@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="" UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test 1oading xml</title>
+</head>
+<body>
+      <div id='content'>
+          <table id='students cellpadding='20px' style="text-align:left;">
+           <thead>
+             <tr>
+                  <th>Student ID</th>
+                  <th>Name</th>
+                  <th>Department</th>
+             </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+        <div>
+       <script>
+        let xmlContent = '';
+        let tableStudents = document.getElementById('xml');
+        fetch('xml.xml').then((response) =>{
+            response.text().then((xml) =>{
+              xmlContent= xml;
+                let parser = new DomParser();
+                let xmlDom = parser.parsefromString(xmlContent, 'application/xml');
+                let students =xmlDOM.querySelectorAll('student');
+             });
+                books.forEach()studentidXmlNode => {
+                     let row = document.createElelement('tr')
+                      
+
+
+                   //studentid
+                   let td = document.createElement('td')
+                   td.innerText = bookXmlNode.children[0].innerHTML;
+                   row.appendChild(td);
+                   
+                      //name
+                   let td = document.createElement('td')
+                   td.innerText = bookXmlNode.children[0].innerHTML;
+                   row.appendChild(td);
+                    
+                      //department
+                   let td = document.createElement('td')
+                   td.innerText = bookXmlNode.children[0].innerHTML;
+                   row.appendChild(td);
+
+                   tablebooks.children[1]
+          }); 
+       });
+   });
+    </script>
+    </body>
+    </html
+         
